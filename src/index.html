@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+    <form
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="POST">
       <fieldset class="block">
         <legend>Personal information</legend>
         <label for="surname" class="formField">
@@ -81,18 +83,22 @@
         <legend>An interesting fact about you!</legend>
         <label for="multi_choice" class="formField">
           Do you love cats?
-          <input
-            type="radio"
-            name="yes"
-            id="yes"
-          >
-          Yes
-          <input
-            type="radio"
-            name="no"
-            id="no"
-          >
-          No
+          <label for="yes" class="formField">
+            Yes
+            <input
+              type="radio"
+              name="multi_choice"
+              id="yes"
+            >
+          </label>
+          <label for="no">
+            No
+            <input
+              type="radio"
+              name="multi_choice"
+              id="no"
+            >
+          </label>
         </label>
         <label for="color" class="formField">
           What is your favorite color?
@@ -100,6 +106,7 @@
             type="color"
             name="color"
             id="color"
+            value="#000000"
           >
         </label>
         <label for="time" class="formField">
@@ -117,9 +124,9 @@
             id="cars"
             multiple
           >
-            <option value="BMW">BMW</option>
-            <option value="Audi">Audi</option>
-            <option value="Lada">Lada</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="lada">Lada</option>
           </select>
         </label>
         <label for="range" class="formField">
@@ -129,6 +136,9 @@
             name="range"
             id="range"
             value="0"
+            step="1"
+            min="0"
+            max="10"
           >
         </label>
       </fieldset>
